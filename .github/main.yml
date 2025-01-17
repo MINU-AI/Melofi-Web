@@ -4,7 +4,7 @@ on:
   pull_request:
     types:
       - closed
-    branches: [develop]
+    branches: [master]
 
 env:
   ECR_REPOSITORY: melofi-web
@@ -20,7 +20,7 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v4
         with:
-          ref: develop
+          ref: master
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
