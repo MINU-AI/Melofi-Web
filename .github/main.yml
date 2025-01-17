@@ -1,11 +1,10 @@
 name: Song AI Backend service deployment
 
 on:
-  # Triggers the workflow on pull request events, but only for the develop branch
   pull_request:
     types:
       - closed
-    branches: [develop]
+    branches: [master]
 
 env:
   ECR_REPOSITORY: melofi-web
@@ -21,7 +20,7 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v4
         with:
-          ref: develop
+          ref: master
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
