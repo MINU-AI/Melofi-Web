@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 interface SongCardProps {
   song: Song;
-  style?: React.CSSProperties; // Add this prop for custom styles
+  style?: React.CSSProperties; 
 }
 const SongAI : React.FC<SongCardProps> = ({ song, style }) => {
   const [currentTime, setCurrentTime] = useState(0);
