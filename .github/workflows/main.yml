@@ -15,7 +15,7 @@ env:
 
 jobs:
   pull-code-and-build-container:
-    runs-on: minu-dev
+    runs-on: melofi-web-dev
     steps:
       - name: Check out the repository
         uses: actions/checkout@v4
@@ -43,7 +43,7 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
   deploy-on-remote-host:
-    runs-on: minu-dev
+    runs-on: melofi-web-dev
     needs: pull-code-and-build-container
     steps:
       - name: Configure AWS credentials
