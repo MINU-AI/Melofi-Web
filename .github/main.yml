@@ -1,7 +1,6 @@
 name: Song AI Backend service deployment
 
 on:
-  # Triggers the workflow on pull request events, but only for the develop branch
   pull_request:
     types:
       - closed
